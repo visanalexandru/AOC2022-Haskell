@@ -14,7 +14,7 @@ solve2 x = sum $ take 3 $ reverse $ sort $ map sum x
 
 
 main = do
- input <- readFile("input")
+ input <- readFile "input"
 
  let x =  lines input
  let input = parseInput x

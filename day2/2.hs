@@ -44,7 +44,7 @@ solve2 moves = sum $ map score2 moves
 
 
 main = do 
- input <- readFile("input")
+ input <- readFile "input"
  let x = parse $ lines input
  putStrLn $ show $ solve1 x 
  putStrLn $ show $ solve2 x 

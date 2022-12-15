@@ -13,7 +13,7 @@ data Move = Move {count:: Int , from :: Int, to :: Int} deriving Show
 
 -- converts the input into the stacks
 get_stacks :: [String] -> [Stack]
-get_stacks model = [Stack (x+1) (get_column x)| x<-[0..num_stacks-1]]
+get_stacks model = [Stack (x+1) (get_column x)| x<-[0.. length $ head model]]
  where get_column p = filter (/=' ') $  [x!!p | x<-model ]
 
 parse_move :: String -> Move 
